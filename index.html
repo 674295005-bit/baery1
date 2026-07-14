@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การพัฒนาเว็บแอปพลิเคชันด้วยโปรแกรมสำเร็จรูป</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .profile-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--secondary-color);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .profile-info h2 {
+            margin: 0 0 0.5rem 0;
+            color: var(--primary-color);
+        }
+
+        .profile-info p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .content-section h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .content-section h3 {
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 600px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>วิชาการพัฒนาเว็บแอปพลิเคชันด้วยโปรแกรมสำเร็จรูป</h1>
+        <p>Web Application Development with Ready-Made Software</p>
+    </header>
+
+    <div class="container">
+        <!-- ส่วนข้อมูลส่วนตัว -->
+        <section class="profile-section">
+            <!-- แปลงลิงก์ Google Drive เป็นลิงก์สำหรับแสดงรูปภาพ (uc?export=view&id=...) -->
+            <img class="profile-img" src="https://drive.google.com/uc?export=view&id=1RbBXl1G9Rvut4bt9Ug91UloSnUYijseW" alt="รูปโปรไฟล์">
+            <div class="profile-info">
+                <h2>นาย ณัฐวัตร นามนก</h2>
+                <p>รหัสนักศึกษา: <strong>674295005</strong></p>
+                <p>ผู้จัดทำเว็บไซต์</p>
+            </div>
+        </section>
+
+        <!-- ส่วนเนื้อหาวิชาการ -->
+        <section class="content-section">
+            <h2>ทำความรู้จักกับ CMS (Content Management System)</h2>
+            <p><strong>โปรแกรมสำเร็จรูปในการสร้างเว็บไซต์ (CMS)</strong> คือ ระบบที่นำมาช่วยในการสร้างและบริหารจัดการเนื้อหาของเว็บไซต์ โดยที่ผู้ใช้งานไม่จำเป็นต้องมีความรู้เรื่องการเขียนโค้ด (Coding) หรือภาษาโปรแกรมมิ่งอย่าง HTML, CSS, หรือ PHP ในระดับลึก ระบบจะจัดเตรียมโครงสร้าง โทนสี และฟังก์ชันการใช้งานต่างๆ ไว้ให้อย่างเป็นหมวดหมู่</p>
+
+            <h3>โปรแกรมสำเร็จรูปที่ได้รับความนิยม</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <h4>1. WordPress</h4>
+                    <p>ได้รับความนิยมอันดับ 1 ของโลก เหมาะสำหรับการทำเว็บบล็อก เว็บไซต์องค์กร และ E-Commerce มีความยืดหยุ่นสูงและมี Plugin ให้เลือกใช้มากมาย</p>
+                </div>
+                <div class="card">
+                    <h4>2. Wix</h4>
+                    <p>ใช้งานง่ายมากด้วยระบบ Drag & Drop (ลากแล้ววาง) มีเทมเพลตที่สวยงาม เหมาะสำหรับเว็บพอร์ตโฟลิโอและธุรกิจขนาดเล็ก</p>
+                </div>
+                <div class="card">
+                    <h4>3. Shopify</h4>
+                    <p>ออกแบบมาเพื่อการทำเว็บไซต์ E-Commerce หรือร้านค้าออนไลน์โดยเฉพาะ มีระบบจัดการหลังบ้านที่ครบครันตั้งแต่การสต็อกสินค้าไปจนถึงระบบชำระเงิน</p>
+                </div>
+            </div>
+
+            <h3>ข้อดีของการพัฒนาเว็บด้วยโปรแกรมสำเร็จรูป</h3>
+            <ul>
+                <li><strong>ประหยัดเวลาและงบประมาณ:</strong> สามารถสร้างเว็บไซต์ให้เสร็จพร้อมใช้งานได้ภายในไม่กี่วัน หรือไม่กี่ชั่วโมง</li>
+                <li><strong>ไม่ต้องเขียนโค้ด:</strong> มีเครื่องมือและส่วนต่อประสานกับผู้ใช้ (User Interface) ที่เข้าใจง่าย</li>
+                <li><strong>มีเทมเพลตพร้อมใช้:</strong> สามารถเลือกรูปแบบดีไซน์ที่เหมาะสมกับธุรกิจได้ทันที</li>
+                <li><strong>รองรับ SEO เบื้องต้น:</strong> ระบบส่วนใหญ่ถูกออกแบบมาให้เป็นมิตรกับ Search Engine (เช่น Google) ทำให้เว็บไซต์มีโอกาสติดหน้าแรกได้ง่ายขึ้น</li>
+                <li><strong>ดูแลรักษาง่าย:</strong> สามารถอัปเดตข้อมูลและรูปภาพได้ด้วยตนเองผ่านระบบหลังบ้าน (Backend) ทันที</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 จัดทำโดย นาย ณัฐวัตร นามนก (674295005) | รายวิชาการพัฒนาเว็บแอปพลิเคชันด้วยโปรแกรมสำเร็จรูป</p>
+    </footer>
+
+</body>
+</html>
